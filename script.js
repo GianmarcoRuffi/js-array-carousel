@@ -43,7 +43,7 @@ let up = document.querySelector(".up");
 let down = document.querySelector(".down");
 
 spotlight.innerHTML =
-  '<img src="' + items[index] + ' "class="mainimg" alt="" />';
+  '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
 
 //
 
