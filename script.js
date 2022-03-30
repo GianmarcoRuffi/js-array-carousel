@@ -45,8 +45,7 @@ let down = document.querySelector(".down");
 spotlight.innerHTML =
   '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
 
-caption.innerHTML = "<h1>" + title[currentIndex] + "</h1>";
-"<p>" + text[currentIndex] + "</p>";
+caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 
 //
 
