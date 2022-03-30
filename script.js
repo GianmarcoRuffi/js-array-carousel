@@ -45,10 +45,14 @@ let down = document.querySelector(".down");
 spotlight.innerHTML =
   '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
 
+caption.innerHTML = "<h1>" + title[currentIndex] + "</h1>";
+"<p>" + text[currentIndex] + "</p>";
+
 //
 
 up.addEventListener("click", function () {
   console.log("Up button clicked with index " + currentIndex);
+
   if (currentIndex == 0) {
     currentIndex = 5;
   } else {
