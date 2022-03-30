@@ -35,9 +35,19 @@ const text = [
 
 let currentIndex = 0;
 const listaImmagini = document.getElementsByClassName("item");
-const next = document.querySelector(".next");
-next.addEventListener("click", function () {
+
+const down = document.querySelector(".down");
+down.addEventListener("click", function () {
+  console.log("currentIndex = currentIndex");
   listaImmagini[currentIndex].classList.remove("active");
   currentIndex += 1;
+  listaImmagini[currentIndex].classList.add("active");
+});
+
+const up = document.querySelector(".up");
+up.addEventListener("click", function () {
+  console.log("currentIndex = currentIndex");
+  listaImmagini[currentIndex].classList.remove("active");
+  currentIndex -= 1;
   listaImmagini[currentIndex].classList.add("active");
 });
