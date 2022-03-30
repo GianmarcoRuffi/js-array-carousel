@@ -34,39 +34,20 @@ const text = [
 ];
 
 let currentIndex = 0;
+const listaImmagini = document.getElementsByClassName("item");
 
-let spotlight = document.getElementById("spotlight");
-let caption = document.querySelector(".caption");
-let sideimg = document.querySelector(".sideimg");
-
-let up = document.querySelector(".up");
-let down = document.querySelector(".down");
-
-spotlight.innerHTML =
-  '<img src="' + items[index] + ' "class="mainimg" alt="" />';
-
-//
-
-up.addEventListener("click", function () {
-  console.log("Up button clicked with index " + currentIndex);
-  if (currentIndex == 0) {
-    currentIndex = 5;
-  } else {
-    currentIndex = currentIndex - 1;
-  }
-
-  console.log("index changed " + currentIndex);
-});
-
+const down = document.querySelector(".down");
 down.addEventListener("click", function () {
-  console.log("Down button clicked with index " + currentIndex);
-  if (currentIndex == 5) {
-    currentIndex = 0;
-  } else {
-    currentIndex = currentIndex + 1;
-  }
-
-  console.log("index changed " + currentIndex);
+  console.log("currentIndex = currentIndex");
+  listaImmagini[currentIndex].classList.remove("active");
+  currentIndex += 1;
+  listaImmagini[currentIndex].classList.add("active");
 });
 
-//
+const up = document.querySelector(".up");
+up.addEventListener("click", function () {
+  console.log("currentIndex = currentIndex");
+  listaImmagini[currentIndex].classList.remove("active");
+  currentIndex -= 1;
+  listaImmagini[currentIndex].classList.add("active");
+});

@@ -19,62 +19,32 @@
     <title>Carousel</title>
   </head>
   <body>
-    <div class="container">
-      <div class="slide active">
-        <img src="img/01.jpg" alt="Img 1" />
-        <div class="slideText">
-          <h3>Svizzera</h3>
-          <span>Lorem ipsum</span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/02.jpg" alt="Img 2" />
-        <div class="slideText">
-          <h3></h3>
-          <span></span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/03.jpg" alt="Img 3" />
-        <div class="slideText">
-          <h3></h3>
-          <span></span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/04.jpg" alt="Img 4" />
-        <div class="slideText">
-          <h3></h3>
-          <span></span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/05.jpg" alt="Img 5" />
-        <div class="slideText">
-          <h3></h3>
-          <span></span>
-        </div>
-      </div>
-      <div class="row">
-        <div id="next"><i class="fa-solid fa-chevron-up"></i></div>
-        <div id="previous"><i class="fa-solid fa-chevron-down"></i></div>
-        <div class="col">
-          <img src="img/01.jpg" alt="Img 1" />
-        </div>
-        <div class="col">
-          <img src="img/02.jpg" alt="Img 2" />
-        </div>
-        <div class="col">
-          <img src="img/03.jpg" alt="Img 3" />
-        </div>
-        <div class="col">
-          <img src="img/04.jpg" alt="Img 4" />
-        </div>
-        <div class="col">
-          <img src="img/05.jpg" alt="Img 5" />
+    <div class="main d-flex justify-content-center align-items-center">
+      <div class="container d-flex">
+        <div class="row d-flex">
+          <div class="col-10" id="spotlight">
+            <img src="./img/01.jpg" class="mainimg" alt="" />
+            <div class="caption"></div>
+          </div>
+          <div class="col-2">
+            <div class="carousel-button up">
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+
+            <img src="./img/01.jpg" class="sideimg" alt="" />
+            <img src="./img/01.jpg" class="sideimg" alt="" />
+            <img src="./img/01.jpg" class="sideimg" alt="" />
+            <img src="./img/01.jpg" class="sideimg" alt="" />
+            <img src="./img/01.jpg" class="sideimg" alt="" />
+
+            <div class="carousel-button down">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
