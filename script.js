@@ -52,25 +52,33 @@ caption.innerHTML = "<h1>" + title[currentIndex] + "</h1>";
 
 up.addEventListener("click", function () {
   console.log("Up button clicked with index " + currentIndex);
-
   if (currentIndex == 0) {
-    currentIndex = 5;
+    currentIndex = items.length - 1;
   } else {
     currentIndex = currentIndex - 1;
   }
+
+  spotlight.innerHTML =
+    '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
+
+  caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 
   console.log("index changed " + currentIndex);
 });
 
 down.addEventListener("click", function () {
   console.log("Down button clicked with index " + currentIndex);
-  if (currentIndex == 5) {
+  if (currentIndex == items.length - 1) {
     currentIndex = 0;
   } else {
     currentIndex = currentIndex + 1;
   }
 
+  spotlight.innerHTML =
+    '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
   console.log("index changed " + currentIndex);
+
+  caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 });
 
 //
