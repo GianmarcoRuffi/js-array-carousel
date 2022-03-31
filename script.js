@@ -37,13 +37,12 @@ let currentIndex = 0;
 
 let spotlight = document.getElementById("spotlight");
 let caption = document.querySelector(".caption");
-let sideimg = document.querySelector(".sideimg");
+const sideimg = document.getElementsByClassName("sideimg");
 
 let up = document.querySelector(".up");
 let down = document.querySelector(".down");
 
-spotlight.innerHTML =
-  '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
+spotlight.innerHTML = `<img src="${items[currentIndex]}" class="mainimg" alt="" />`;
 
 caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 
@@ -51,14 +50,17 @@ caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]}
 
 up.addEventListener("click", function () {
   console.log("Up button clicked with index " + currentIndex);
+  sideimg[currentIndex].classList.remove("active");
+
   if (currentIndex == 0) {
     currentIndex = items.length - 1;
   } else {
     currentIndex = currentIndex - 1;
   }
 
-  spotlight.innerHTML =
-    '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
+  sideimg[currentIndex].classList.add("active");
+
+  spotlight.innerHTML = `<img src="${items[currentIndex]}" class="mainimg" alt="" />`;
 
   caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 
@@ -67,15 +69,14 @@ up.addEventListener("click", function () {
 
 down.addEventListener("click", function () {
   console.log("Down button clicked with index " + currentIndex);
+  sideimg[currentIndex].classList.remove("active");
   if (currentIndex == items.length - 1) {
     currentIndex = 0;
   } else {
     currentIndex = currentIndex + 1;
   }
-
-  spotlight.innerHTML =
-    '<img src="' + items[currentIndex] + ' "class="mainimg" alt="" />';
-  console.log("index changed " + currentIndex);
+  sideimg[currentIndex].classList.add("active");
+  spotlight.innerHTML = `<img src="${items[currentIndex]}" class="mainimg" alt="" />`;
 
   caption.innerHTML = `<h1> ${title[currentIndex]} </h1> <p> ${text[currentIndex]} </p>`;
 });

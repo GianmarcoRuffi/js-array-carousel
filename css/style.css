@@ -25,6 +25,11 @@
 .sideimg {
   width: auto;
   height: calc(500px / 5);
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
 }
 
 .mainimg {
@@ -40,7 +45,6 @@
   position: absolute;
   width: 50px;
   height: 30px;
-  background-color: chartreuse;
   bottom: 54px;
   right: 179px;
 }
@@ -64,12 +68,14 @@
   left: 50%;
   transform: translateX(-50%);
   top: 10px;
+  z-index: 2;
 }
 
 .down {
   left: 50%;
   transform: translateX(-50%);
   bottom: 10px;
+  z-index: 2;
 }
 
 .up:hover,
